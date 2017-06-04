@@ -46,7 +46,7 @@ var app = app || {};
   Article.all.push(new Article(ele));
 });
 */
-Article.all = rows.map(funtion(row){
+Article.all = rows.map(function(row){
   return new Article(row)
 })
 };
@@ -79,7 +79,7 @@ Article.all = rows.map(funtion(row){
                         return acc
                       }, []);
                       };
-
+// DONE: Chain together a `map` and a `reduce` call to get a rough count of all words in all articles.
 
   Article.numWordsByAuthor = (Article.numWordsAll, Article.allAuthors) => {
     return Article.allAuthors().map(author => { return {
